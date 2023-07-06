@@ -2,7 +2,7 @@
 
 int main()
 {
-    bool submitted[31]{ false }; 
+    bool submitted[30]{ false }; 
 
     for (int i = 0; i < 28; i++)
     {
