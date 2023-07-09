@@ -1,24 +1,24 @@
 #include <iostream>
-#include <string>
 
-int main()
+int main() 
 {
     std::string str;
     std::cin >> str;
 
-    for (char& c : str)
+    for (char& ch : str) 
     {
-        if (c >= 'a' && c <= 'z')
+        if (ch >= 'a' && ch <= 'z') 
         {
-            c = c - 'a' + 'A'; 
-        }
-        else if (c >= 'A' && c <= 'Z')
+            ch = ch - 'a' + 'A';
+        } 
+        else if (ch >= 'A' && ch <= 'Z') 
         {
-            c = c - 'A' + 'a'; 
+            ch = ch - 'A' + 'a';
         }
     }
 
-    std::cout << str;
+    std::cout << str << std::endl;
 
     return 0;
 }
+   
