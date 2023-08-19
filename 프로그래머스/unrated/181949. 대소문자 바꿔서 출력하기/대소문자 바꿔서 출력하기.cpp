@@ -1,9 +1,11 @@
 #include <iostream>
+using namespace std;
 
 int main() 
 {
-    std::string str;
-    std::cin >> str;
+    string str;
+    
+    cin >> str;
 
     for (char& ch : str) 
     {
@@ -17,7 +19,7 @@ int main()
         }
     }
 
-    std::cout << str << std::endl;
+    cout << str << std::endl;
 
     return 0;
 }
