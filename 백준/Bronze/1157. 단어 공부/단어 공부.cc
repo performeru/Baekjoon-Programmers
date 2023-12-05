@@ -1,37 +1,43 @@
 #include <iostream>
 #include <cstring>
 #include <cctype>
-
 using namespace std;
 
 int main() 
 {
     char word[1000001];
-    int count[26] = {0};
+    int count[26] = {0}; 
 
     cin.getline(word, sizeof(word)); 
 
     int len = strlen(word);
 
-    for (int i = 0; i < len; i++)
+    for (int i = 0; i < len; i++) 
     {
         if (isalpha(word[i])) 
         {
-            count[toupper(word[i]) - 'A']++;
+            if (word[i] >= 'a' && word[i] <= 'z') 
+            {
+                count[word[i] - 'a']++;
+            } 
+            else
+            {
+                count[word[i] - 'A']++;
+            }
         }
     }
 
     int maxCount = 0;
     char result = '?';
 
-    for (int i = 0; i < 26; i++)
+    for (int i = 0; i < 26; i++) 
     {
-        if (count[i] > maxCount) 
+        if (count[i] > maxCount)
         {
             maxCount = count[i];
             result = 'A' + i;
-        }
-        else if (count[i] == maxCount)
+        } 
+        else if (count[i] == maxCount) 
         {
             result = '?';
         }
