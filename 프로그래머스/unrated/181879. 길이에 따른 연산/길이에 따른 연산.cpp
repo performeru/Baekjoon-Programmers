@@ -7,7 +7,7 @@ int solution(vector<int> num_list)
 {
     if(num_list.size() >= 11)
     {
-        int sum=0;
+        int sum = 0;
         for(int num : num_list)
         {
             sum += num;
