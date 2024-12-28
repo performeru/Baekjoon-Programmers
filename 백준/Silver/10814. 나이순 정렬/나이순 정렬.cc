@@ -16,7 +16,6 @@ int main()
     
     vector<pair<int, string>> a(n);
     
-    // 입력
     for (int i = 0; i < n; i++) 
     {
         cin >> a[i].first >> a[i].second; 
